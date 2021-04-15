@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_MVVMReactiveProgram_MVVMReactiveProgramUITests : NSObject
+@end
+@implementation PodsDummy_Pods_MVVMReactiveProgram_MVVMReactiveProgramUITests
+@end

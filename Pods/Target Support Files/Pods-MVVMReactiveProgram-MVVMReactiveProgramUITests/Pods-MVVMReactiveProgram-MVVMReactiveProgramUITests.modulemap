@@ -1,0 +1,6 @@
+framework module Pods_MVVMReactiveProgram_MVVMReactiveProgramUITests {
+  umbrella header "Pods-MVVMReactiveProgram-MVVMReactiveProgramUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
