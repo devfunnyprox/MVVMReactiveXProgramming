@@ -25,7 +25,7 @@ class CollectionViewTutorialViewController: UIViewController {
     }
     
     func configureCollectionView() {
-        collectionView.register(UINib.init(nibName: "TypeOneCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TypeOneCollectionViewCell")
+        collectionView.register(UINib.init(nibName: "SingleTitleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SingleTitleCollectionViewCell")
     }
     
     func bindViewModel() {
@@ -34,8 +34,8 @@ class CollectionViewTutorialViewController: UIViewController {
             self.title = title
         }).disposed(by: disposeBag)
         
-        viewModel.items.bind(to: collectionView.rx.items(cellIdentifier: "TypeOneCollectionViewCell", cellType: TypeOneCollectionViewCell.self)) { index, item, cell in
-//            if let cell = cell as? TypeOneCollectionViewCell {
+        viewModel.items.bind(to: collectionView.rx.items(cellIdentifier: "SingleTitleCollectionViewCell", cellType: SingleTitleCollectionViewCell.self)) { index, item, cell in
+//            if let cell = cell as? SingleTitleCollectionViewCell {
             cell.configureCell(cellTitle: item)
 //            }
         }.disposed(by: disposeBag)

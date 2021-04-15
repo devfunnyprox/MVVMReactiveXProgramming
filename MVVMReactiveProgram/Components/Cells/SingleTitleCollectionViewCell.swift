@@ -1,5 +1,5 @@
 //
-//  TypeOneCollectionViewCell.swift
+//  SingleTitleCollectionViewCell.swift
 //  MVVMReactiveProgram
 //
 //  Created by Nguyen Van Nguyen on 4/15/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TypeOneCollectionViewCell: UICollectionViewCell {
+class SingleTitleCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cellTitle: UILabel!
 
@@ -21,5 +21,8 @@ class TypeOneCollectionViewCell: UICollectionViewCell {
     func configureCell(cellTitle title: String) {
         cellTitle.text = title
     }
-
+    
+    static func cellHeight() -> CGFloat {
+        return 70
+    }
 }
