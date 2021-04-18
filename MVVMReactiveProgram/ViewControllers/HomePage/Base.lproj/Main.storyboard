@@ -46,21 +46,32 @@
                                 </constraints>
                                 <state key="normal" title="Mutable Cell Collection View"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13T-cB-bw9">
+                                <rect key="frame" x="50" y="328" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lz1-TG-8eR"/>
+                                </constraints>
+                                <state key="normal" title="Mutable Section Collection View"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="13T-cB-bw9" firstAttribute="leading" secondItem="8s8-uC-Ake" secondAttribute="leading" id="1eD-ag-yQn"/>
                             <constraint firstItem="3QR-Zh-s6B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="BDZ-Cc-AY6"/>
                             <constraint firstItem="8s8-uC-Ake" firstAttribute="top" secondItem="3QR-Zh-s6B" secondAttribute="bottom" constant="20" id="DxY-t0-nH1"/>
                             <constraint firstItem="8s8-uC-Ake" firstAttribute="leading" secondItem="3QR-Zh-s6B" secondAttribute="leading" id="GsR-XP-RaE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3QR-Zh-s6B" secondAttribute="trailing" constant="50" id="OyX-e5-pfr"/>
+                            <constraint firstItem="13T-cB-bw9" firstAttribute="trailing" secondItem="8s8-uC-Ake" secondAttribute="trailing" id="RSy-bD-tAS"/>
                             <constraint firstItem="3QR-Zh-s6B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ou4-T6-g2u"/>
                             <constraint firstItem="8s8-uC-Ake" firstAttribute="trailing" secondItem="3QR-Zh-s6B" secondAttribute="trailing" id="rSc-ex-bNq"/>
+                            <constraint firstItem="13T-cB-bw9" firstAttribute="top" secondItem="8s8-uC-Ake" secondAttribute="bottom" constant="20" id="sdm-xb-gWu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lnu-Yp-9Rl"/>
                     <connections>
                         <outlet property="mutableCellButton" destination="8s8-uC-Ake" id="5es-KG-3eX"/>
+                        <outlet property="mutableSectionCellButton" destination="13T-cB-bw9" id="9Dw-O1-Ixn"/>
                         <outlet property="singleCellButton" destination="3QR-Zh-s6B" id="lxG-lj-sf6"/>
                     </connections>
                 </viewController>

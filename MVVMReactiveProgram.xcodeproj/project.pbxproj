@@ -27,6 +27,11 @@
 		20744EEE2628960500EC16A1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20744EED2628960500EC16A1 /* BaseViewModel.swift */; };
 		20744EF42628986D00EC16A1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20744EF22628986D00EC16A1 /* ImageCollectionViewCell.swift */; };
 		20744EF52628986D00EC16A1 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20744EF32628986D00EC16A1 /* ImageCollectionViewCell.xib */; };
+		208024BC262B435700B006BA /* MutableSectionSingleCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208024BB262B435700B006BA /* MutableSectionSingleCellViewController.swift */; };
+		208024C4262B436D00B006BA /* MutableSectionSingleCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208024C3262B436D00B006BA /* MutableSectionSingleCell.storyboard */; };
+		208024C9262B46E300B006BA /* MutableSectionSingleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208024C8262B46E300B006BA /* MutableSectionSingleCellViewModel.swift */; };
+		208A632C262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A632A262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.swift */; };
+		208A632D262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 208A632B262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.xib */; };
 		208A898C26289942001AFC66 /* MutableCellCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A898B26289942001AFC66 /* MutableCellCollectionViewViewModel.swift */; };
 		208A899526289A69001AFC66 /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A899326289A69001AFC66 /* SubtitleCollectionViewCell.swift */; };
 		208A899626289A69001AFC66 /* SubtitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 208A899426289A69001AFC66 /* SubtitleCollectionViewCell.xib */; };
@@ -81,6 +86,11 @@
 		20744EED2628960500EC16A1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		20744EF22628986D00EC16A1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		20744EF32628986D00EC16A1 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		208024BB262B435700B006BA /* MutableSectionSingleCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableSectionSingleCellViewController.swift; sourceTree = "<group>"; };
+		208024C3262B436D00B006BA /* MutableSectionSingleCell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MutableSectionSingleCell.storyboard; sourceTree = "<group>"; };
+		208024C8262B46E300B006BA /* MutableSectionSingleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableSectionSingleCellViewModel.swift; sourceTree = "<group>"; };
+		208A632A262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderTitleCollectionReusableView.swift; sourceTree = "<group>"; };
+		208A632B262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderTitleCollectionReusableView.xib; sourceTree = "<group>"; };
 		208A898B26289942001AFC66 /* MutableCellCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCellCollectionViewViewModel.swift; sourceTree = "<group>"; };
 		208A899326289A69001AFC66 /* SubtitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		208A899426289A69001AFC66 /* SubtitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -259,6 +269,7 @@
 		20744EE52628958B00EC16A1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				208A6322262BD8DB000094F0 /* Views */,
 				20744EAA2628712A00EC16A1 /* Cells */,
 			);
 			path = Components;
@@ -267,6 +278,8 @@
 		20744EE62628959F00EC16A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				20EB9B00262C23E40047AD9E /* MutableSectionMutableCell */,
+				208024BA262B431D00B006BA /* MutableSectionSingleCell */,
 				20744EB526287F4D00EC16A1 /* HomePage */,
 				20744E9326286F7C00EC16A1 /* SingleCellCollectionView */,
 				20744ED42628950D00EC16A1 /* MutbleCellCollectionView */,
@@ -281,6 +294,40 @@
 				20744EED2628960500EC16A1 /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		208024BA262B431D00B006BA /* MutableSectionSingleCell */ = {
+			isa = PBXGroup;
+			children = (
+				208024BB262B435700B006BA /* MutableSectionSingleCellViewController.swift */,
+				208024C3262B436D00B006BA /* MutableSectionSingleCell.storyboard */,
+				208024C8262B46E300B006BA /* MutableSectionSingleCellViewModel.swift */,
+			);
+			path = MutableSectionSingleCell;
+			sourceTree = "<group>";
+		};
+		208A6322262BD8DB000094F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				208A6326262BD8E1000094F0 /* Headers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		208A6326262BD8E1000094F0 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				208A632A262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.swift */,
+				208A632B262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.xib */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		20EB9B00262C23E40047AD9E /* MutableSectionMutableCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MutableSectionMutableCell;
 			sourceTree = "<group>";
 		};
 		5FE254DEBFF4D38E8C165E77 /* Pods */ = {
@@ -408,9 +455,11 @@
 				20744E5926286E9A00EC16A1 /* LaunchScreen.storyboard in Resources */,
 				20744E9D26286FC400EC16A1 /* CollectionViewTutorial.storyboard in Resources */,
 				208A899626289A69001AFC66 /* SubtitleCollectionViewCell.xib in Resources */,
+				208A632D262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.xib in Resources */,
 				20744E5626286E9A00EC16A1 /* Assets.xcassets in Resources */,
 				20744EF52628986D00EC16A1 /* ImageCollectionViewCell.xib in Resources */,
 				20744E5426286E9A00EC16A1 /* Main.storyboard in Resources */,
+				208024C4262B436D00B006BA /* MutableSectionSingleCell.storyboard in Resources */,
 				20744EDE2628957200EC16A1 /* MutableCellCollectionView.storyboard in Resources */,
 				20744EAE2628715700EC16A1 /* SingleTitleCollectionViewCell.xib in Resources */,
 			);
@@ -543,6 +592,7 @@
 				208A898C26289942001AFC66 /* MutableCellCollectionViewViewModel.swift in Sources */,
 				208A899526289A69001AFC66 /* SubtitleCollectionViewCell.swift in Sources */,
 				20744EA226286FE800EC16A1 /* CollectionViewTutorialViewModel.swift in Sources */,
+				208024BC262B435700B006BA /* MutableSectionSingleCellViewController.swift in Sources */,
 				20744EF42628986D00EC16A1 /* ImageCollectionViewCell.swift in Sources */,
 				20744EEE2628960500EC16A1 /* BaseViewModel.swift in Sources */,
 				20744E5126286E9A00EC16A1 /* ViewController.swift in Sources */,
@@ -554,6 +604,8 @@
 				20744EAD2628715700EC16A1 /* SingleTitleCollectionViewCell.swift in Sources */,
 				20744ED62628955800EC16A1 /* MutableCellCollectionViewViewController.swift in Sources */,
 				20744EBD26288A1B00EC16A1 /* UIViewControllerExtensions.swift in Sources */,
+				208A632C262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.swift in Sources */,
+				208024C9262B46E300B006BA /* MutableSectionSingleCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

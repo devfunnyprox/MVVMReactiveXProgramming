@@ -10,6 +10,10 @@ import UIKit
 class MutableCellCollectionViewViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    deinit {
+        print("MutableCellCollectionViewViewController deinit")
+    }
 
     override func viewDidLoad() {
         

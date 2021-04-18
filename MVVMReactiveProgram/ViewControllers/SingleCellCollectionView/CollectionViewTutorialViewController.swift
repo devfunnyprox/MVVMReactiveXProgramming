@@ -16,6 +16,10 @@ class CollectionViewTutorialViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     let viewModel = CollectionViewTutorialViewModel()
+    
+    deinit {
+        print("CollectionViewTutorialViewController deinit")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +34,7 @@ class CollectionViewTutorialViewController: UIViewController {
     
     func bindViewModel() {
         
-        viewModel.title.subscribe(onNext: { title in
+        viewModel.title.subscribe(onNext: {[unowned self] title in
             self.title = title
         }).disposed(by: disposeBag)
         

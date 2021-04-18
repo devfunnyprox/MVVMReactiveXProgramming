@@ -12,6 +12,7 @@ import RxCocoa
 class ViewController: UIViewController {
     @IBOutlet weak var singleCellButton: UIButton!
     @IBOutlet weak var mutableCellButton: UIButton!
+    @IBOutlet weak var mutableSectionCellButton: UIButton!
     
     let disposeBag = DisposeBag()
 
@@ -31,6 +32,10 @@ class ViewController: UIViewController {
         mutableCellButton.rx.tap.bind { [unowned self] in
             self.openMutableCellCollectionView()
         }.disposed(by: disposeBag)
+        
+        mutableSectionCellButton.rx.tap.bind { [unowned self] in
+            self.openMutableSectionCellCollectionView()
+        }.disposed(by: disposeBag)
     }
     
     func openSingleCellCollectionView() {
@@ -42,6 +47,12 @@ class ViewController: UIViewController {
     func openMutableCellCollectionView() {
         let storyboard = UIStoryboard(name: "MutableCellCollectionView", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "MutableCellCollectionViewViewController") as? MutableCellCollectionViewViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func openMutableSectionCellCollectionView() {
+        let storyboard = UIStoryboard(name: "MutableSectionSingleCell", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "MutableSectionSingleCellViewController") as? MutableSectionSingleCellViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
