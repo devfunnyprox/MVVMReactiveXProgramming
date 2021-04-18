@@ -7,12 +7,14 @@
 //
 
 import RxSwift
+import RxCocoa
 import RxDataSources
 
 class MutableSectionSingleCellViewModel: BaseViewModel {
     
     var items = BehaviorSubject<[String]>(value: [String]())
     var itemSources = PublishSubject<[SectionModel<String, String>]>()
+    var isLoading = ActivityIndicator()
     
     let itemSection1 = ["Cell 1", "Cell 2", "Cell 3", "Cell 4", "Cell 5", "Cell 6", "Cell 7", "Cell 8", "Cell 9", "Cell 10", "Cell 11", "Cell 12"]
     
@@ -27,7 +29,7 @@ class MutableSectionSingleCellViewModel: BaseViewModel {
             let itemSources1 = self.makeSources(["Section 1": self.itemSection1])
             let itemSources2 = self.makeSources(["Section 2": self.itemSection2])
             
-            Observable.just(itemSources1 + itemSources2).bind(to: self.itemSources).disposed(by: self.disposeBag)
+            Observable.just(itemSources1 + itemSources2).trackActivity(self.isLoading).asObservable().bind(to: self.itemSources).disposed(by: self.disposeBag)
         }
     }
     

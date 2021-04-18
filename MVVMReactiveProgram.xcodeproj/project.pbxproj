@@ -36,6 +36,10 @@
 		208A899526289A69001AFC66 /* SubtitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A899326289A69001AFC66 /* SubtitleCollectionViewCell.swift */; };
 		208A899626289A69001AFC66 /* SubtitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 208A899426289A69001AFC66 /* SubtitleCollectionViewCell.xib */; };
 		208A899E26289B93001AFC66 /* DummyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A899D26289B93001AFC66 /* DummyModel.swift */; };
+		20B4E6F2262C82820019759D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4E6F1262C82820019759D /* ActivityIndicator.swift */; };
+		20EB9B05262C27E50047AD9E /* MutableSectionMutableCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20EB9B04262C27E50047AD9E /* MutableSectionMutableCell.storyboard */; };
+		20EB9B0A262C28050047AD9E /* MutableSectionMutableCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB9B09262C28050047AD9E /* MutableSectionMutableCellViewController.swift */; };
+		20EB9B0F262C282B0047AD9E /* MutableSectionMutableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB9B0E262C282B0047AD9E /* MutableSectionMutableCellViewModel.swift */; };
 		3C4622C6FC88C26F42C51BE6 /* Pods_MVVMReactiveProgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E863BA6E8E3DA5063A5B7A23 /* Pods_MVVMReactiveProgram.framework */; };
 		75CD919DAD82DCADB20E83FE /* Pods_MVVMReactiveProgram_MVVMReactiveProgramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10BC0013F5E91348C30EE18 /* Pods_MVVMReactiveProgram_MVVMReactiveProgramUITests.framework */; };
 		846699D4AD8E21D001931058 /* Pods_MVVMReactiveProgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC05CA3BD79DA01DD296AB9 /* Pods_MVVMReactiveProgramTests.framework */; };
@@ -95,6 +99,10 @@
 		208A899326289A69001AFC66 /* SubtitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		208A899426289A69001AFC66 /* SubtitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		208A899D26289B93001AFC66 /* DummyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyModel.swift; sourceTree = "<group>"; };
+		20B4E6F1262C82820019759D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		20EB9B04262C27E50047AD9E /* MutableSectionMutableCell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MutableSectionMutableCell.storyboard; sourceTree = "<group>"; };
+		20EB9B09262C28050047AD9E /* MutableSectionMutableCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableSectionMutableCellViewController.swift; sourceTree = "<group>"; };
+		20EB9B0E262C282B0047AD9E /* MutableSectionMutableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableSectionMutableCellViewModel.swift; sourceTree = "<group>"; };
 		2193C0393B3727DD4719F91B /* Pods-MVVMReactiveProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMReactiveProgram.release.xcconfig"; path = "Target Support Files/Pods-MVVMReactiveProgram/Pods-MVVMReactiveProgram.release.xcconfig"; sourceTree = "<group>"; };
 		A10BC0013F5E91348C30EE18 /* Pods_MVVMReactiveProgram_MVVMReactiveProgramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMReactiveProgram_MVVMReactiveProgramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B29EA3A239CDE46FED1A76 /* Pods-MVVMReactiveProgramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMReactiveProgramTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMReactiveProgramTests/Pods-MVVMReactiveProgramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 		20744E4B26286E9A00EC16A1 /* MVVMReactiveProgram */ = {
 			isa = PBXGroup;
 			children = (
+				20B4E6F0262C82710019759D /* Utils */,
 				20744EC52628913900EC16A1 /* Extensions */,
 				20744EC42628912900EC16A1 /* App */,
 				20744EA626286FEE00EC16A1 /* Model */,
@@ -323,9 +332,20 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		20B4E6F0262C82710019759D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20B4E6F1262C82820019759D /* ActivityIndicator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		20EB9B00262C23E40047AD9E /* MutableSectionMutableCell */ = {
 			isa = PBXGroup;
 			children = (
+				20EB9B04262C27E50047AD9E /* MutableSectionMutableCell.storyboard */,
+				20EB9B09262C28050047AD9E /* MutableSectionMutableCellViewController.swift */,
+				20EB9B0E262C282B0047AD9E /* MutableSectionMutableCellViewModel.swift */,
 			);
 			path = MutableSectionMutableCell;
 			sourceTree = "<group>";
@@ -455,6 +475,7 @@
 				20744E5926286E9A00EC16A1 /* LaunchScreen.storyboard in Resources */,
 				20744E9D26286FC400EC16A1 /* CollectionViewTutorial.storyboard in Resources */,
 				208A899626289A69001AFC66 /* SubtitleCollectionViewCell.xib in Resources */,
+				20EB9B05262C27E50047AD9E /* MutableSectionMutableCell.storyboard in Resources */,
 				208A632D262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.xib in Resources */,
 				20744E5626286E9A00EC16A1 /* Assets.xcassets in Resources */,
 				20744EF52628986D00EC16A1 /* ImageCollectionViewCell.xib in Resources */,
@@ -595,7 +616,9 @@
 				208024BC262B435700B006BA /* MutableSectionSingleCellViewController.swift in Sources */,
 				20744EF42628986D00EC16A1 /* ImageCollectionViewCell.swift in Sources */,
 				20744EEE2628960500EC16A1 /* BaseViewModel.swift in Sources */,
+				20EB9B0A262C28050047AD9E /* MutableSectionMutableCellViewController.swift in Sources */,
 				20744E5126286E9A00EC16A1 /* ViewController.swift in Sources */,
+				20EB9B0F262C282B0047AD9E /* MutableSectionMutableCellViewModel.swift in Sources */,
 				20744E4D26286E9A00EC16A1 /* AppDelegate.swift in Sources */,
 				20744E4F26286E9A00EC16A1 /* SceneDelegate.swift in Sources */,
 				208A899E26289B93001AFC66 /* DummyModel.swift in Sources */,
@@ -603,6 +626,7 @@
 				20744EE9262895DC00EC16A1 /* BaseViewController.swift in Sources */,
 				20744EAD2628715700EC16A1 /* SingleTitleCollectionViewCell.swift in Sources */,
 				20744ED62628955800EC16A1 /* MutableCellCollectionViewViewController.swift in Sources */,
+				20B4E6F2262C82820019759D /* ActivityIndicator.swift in Sources */,
 				20744EBD26288A1B00EC16A1 /* UIViewControllerExtensions.swift in Sources */,
 				208A632C262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.swift in Sources */,
 				208024C9262B46E300B006BA /* MutableSectionSingleCellViewModel.swift in Sources */,

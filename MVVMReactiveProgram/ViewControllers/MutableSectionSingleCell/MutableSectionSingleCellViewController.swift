@@ -35,6 +35,16 @@ class MutableSectionSingleCellViewController: BaseViewController {
             return
         }
         
+        viewModel.isLoading.asObservable().bind { [unowned self] (isLoading) in
+            if isLoading {
+                let loadingId = UIActivityIndicatorView(frame: CGRect(x: 50, y: 50, width: 50, height: 50))
+                loadingId.startAnimating()
+                self.view.addSubview(loadingId)
+            } else {
+                
+            }
+        }.disposed(by: disposeBag)
+        
         let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, String>>  { (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleTitleCollectionViewCell", for: indexPath) as? SingleTitleCollectionViewCell {
                 cell.configureCell(cellTitle: item)
