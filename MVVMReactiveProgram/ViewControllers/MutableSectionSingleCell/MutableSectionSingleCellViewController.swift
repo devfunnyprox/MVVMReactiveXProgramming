@@ -69,6 +69,8 @@ class MutableSectionSingleCellViewController: BaseViewController {
             return self.configureSupplementaryView(dataSource: dataSource, collectionView: collectionView, sectionType: kind, indexPath: indexPath)
         }
         
+        
+        
         viewModel.itemSources.asObservable().bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
         
         
@@ -86,10 +88,21 @@ class MutableSectionSingleCellViewController: BaseViewController {
     
     func configureSupplementaryView(dataSource: CollectionViewSectionedDataSource<SectionModel<String, String>>, collectionView: UICollectionView, sectionType: String, indexPath: IndexPath) -> UICollectionReusableView {
         let modelSection = dataSource.sectionModels[indexPath.section]
-        if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionHeaderTitleCollectionReusableView.identifier, for: indexPath) as? CollectionHeaderTitleCollectionReusableView {
-            header.backgroundColor = .cyan
-            header.configureHeader(title: modelSection.model)
-            return header
+        switch sectionType {
+        case UICollectionView.elementKindSectionHeader:
+            if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionHeaderTitleCollectionReusableView.identifier, for: indexPath) as? CollectionHeaderTitleCollectionReusableView {
+                header.backgroundColor = .cyan
+                header.configureHeader(title: modelSection.model)
+                return header
+            }
+        case UICollectionView.elementKindSectionFooter:
+            if let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CollectionHeaderTitleCollectionReusableView.identifier, for: indexPath) as? CollectionHeaderTitleCollectionReusableView {
+                footer.backgroundColor = .red
+                footer.configureHeader(title: "Footer section \(indexPath.section)")
+                return footer
+            }
+        default:
+            break
         }
         return UICollectionReusableView()
     }
@@ -98,6 +111,7 @@ class MutableSectionSingleCellViewController: BaseViewController {
         collectionView.register(UINib.init(nibName: "SingleTitleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SingleTitleCollectionViewCell")
         collectionView.register(UINib.init(nibName: "SubtitleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SubtitleCollectionViewCell")
         collectionView.register(UINib.init(nibName: CollectionHeaderTitleCollectionReusableView.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionHeaderTitleCollectionReusableView.identifier)
+        collectionView.register(UINib.init(nibName: CollectionHeaderTitleCollectionReusableView.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CollectionHeaderTitleCollectionReusableView.identifier)
     }
 
 }
@@ -109,5 +123,9 @@ extension MutableSectionSingleCellViewController: UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 70)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 40)
     }
 }

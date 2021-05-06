@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		204FC212264439C100C0F557 /* Paging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204FC211264439C100C0F557 /* Paging.storyboard */; };
+		204FC21726443AC200C0F557 /* ParentPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204FC21626443AC200C0F557 /* ParentPagingViewController.swift */; };
+		204FC21C26443E9900C0F557 /* ChildPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204FC21B26443E9900C0F557 /* ChildPagingViewController.swift */; };
 		20744E4D26286E9A00EC16A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20744E4C26286E9A00EC16A1 /* AppDelegate.swift */; };
 		20744E4F26286E9A00EC16A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20744E4E26286E9A00EC16A1 /* SceneDelegate.swift */; };
 		20744E5126286E9A00EC16A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20744E5026286E9A00EC16A1 /* ViewController.swift */; };
@@ -64,6 +67,9 @@
 
 /* Begin PBXFileReference section */
 		17B18D7AFD04677A9985AD9C /* Pods-MVVMReactiveProgram-MVVMReactiveProgramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMReactiveProgram-MVVMReactiveProgramUITests.release.xcconfig"; path = "Target Support Files/Pods-MVVMReactiveProgram-MVVMReactiveProgramUITests/Pods-MVVMReactiveProgram-MVVMReactiveProgramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		204FC211264439C100C0F557 /* Paging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paging.storyboard; sourceTree = "<group>"; };
+		204FC21626443AC200C0F557 /* ParentPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPagingViewController.swift; sourceTree = "<group>"; };
+		204FC21B26443E9900C0F557 /* ChildPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildPagingViewController.swift; sourceTree = "<group>"; };
 		20744E4926286E9A00EC16A1 /* MVVMReactiveProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMReactiveProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20744E4C26286E9A00EC16A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20744E4E26286E9A00EC16A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +155,16 @@
 				CCC05CA3BD79DA01DD296AB9 /* Pods_MVVMReactiveProgramTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		204FC20D2644396A00C0F557 /* PagingView */ = {
+			isa = PBXGroup;
+			children = (
+				204FC211264439C100C0F557 /* Paging.storyboard */,
+				204FC21626443AC200C0F557 /* ParentPagingViewController.swift */,
+				204FC21B26443E9900C0F557 /* ChildPagingViewController.swift */,
+			);
+			path = PagingView;
 			sourceTree = "<group>";
 		};
 		20744E4026286E9A00EC16A1 = {
@@ -287,6 +303,7 @@
 		20744EE62628959F00EC16A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				204FC20D2644396A00C0F557 /* PagingView */,
 				20EB9B00262C23E40047AD9E /* MutableSectionMutableCell */,
 				208024BA262B431D00B006BA /* MutableSectionSingleCell */,
 				20744EB526287F4D00EC16A1 /* HomePage */,
@@ -478,6 +495,7 @@
 				20EB9B05262C27E50047AD9E /* MutableSectionMutableCell.storyboard in Resources */,
 				208A632D262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.xib in Resources */,
 				20744E5626286E9A00EC16A1 /* Assets.xcassets in Resources */,
+				204FC212264439C100C0F557 /* Paging.storyboard in Resources */,
 				20744EF52628986D00EC16A1 /* ImageCollectionViewCell.xib in Resources */,
 				20744E5426286E9A00EC16A1 /* Main.storyboard in Resources */,
 				208024C4262B436D00B006BA /* MutableSectionSingleCell.storyboard in Resources */,
@@ -621,6 +639,7 @@
 				20EB9B0F262C282B0047AD9E /* MutableSectionMutableCellViewModel.swift in Sources */,
 				20744E4D26286E9A00EC16A1 /* AppDelegate.swift in Sources */,
 				20744E4F26286E9A00EC16A1 /* SceneDelegate.swift in Sources */,
+				204FC21726443AC200C0F557 /* ParentPagingViewController.swift in Sources */,
 				208A899E26289B93001AFC66 /* DummyModel.swift in Sources */,
 				20744E9526286FB200EC16A1 /* CollectionViewTutorialViewController.swift in Sources */,
 				20744EE9262895DC00EC16A1 /* BaseViewController.swift in Sources */,
@@ -630,6 +649,7 @@
 				20744EBD26288A1B00EC16A1 /* UIViewControllerExtensions.swift in Sources */,
 				208A632C262BDB00000094F0 /* CollectionHeaderTitleCollectionReusableView.swift in Sources */,
 				208024C9262B46E300B006BA /* MutableSectionSingleCellViewModel.swift in Sources */,
+				204FC21C26443E9900C0F557 /* ChildPagingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,9 @@ class MutableSectionMutableCellViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
+        viewModel = MutableSectionMutableCellViewModel()
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     override func bindViewModel() {

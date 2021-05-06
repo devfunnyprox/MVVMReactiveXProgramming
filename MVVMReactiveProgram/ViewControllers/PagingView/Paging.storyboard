@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Parent Paging View Controller-->
+        <scene sceneID="ucj-Sv-n9g">
+            <objects>
+                <viewController storyboardIdentifier="ParentPagingViewController" id="Ce8-id-70m" customClass="ParentPagingViewController" customModule="MVVMReactiveProgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uQJ-3r-Y6M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zC-BM-xjL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHN-QJ-oKE">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                                        <color key="tintColor" name="c12026"/>
+                                        <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
+                                        <state key="normal" title="Page 1">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" name="be1e2d"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pagingButtonDidTap:" destination="Ce8-id-70m" eventType="touchUpInside" id="8y9-oM-JTI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GS-ad-yXu">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                                        <color key="tintColor" name="afafaf"/>
+                                        <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
+                                        <state key="normal" title="Page 2">
+                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" name="be1e2d"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pagingButtonDidTap:" destination="Ce8-id-70m" eventType="touchUpInside" id="AxO-7R-Enb"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ8-CO-Zrg">
+                                        <rect key="frame" x="0.0" y="39" width="414" height="1"/>
+                                        <color key="backgroundColor" name="d5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="zzp-pV-N3h"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9GS-ad-yXu" secondAttribute="trailing" id="2Gh-P2-WEs"/>
+                                    <constraint firstItem="9GS-ad-yXu" firstAttribute="top" secondItem="0zC-BM-xjL" secondAttribute="top" id="2vn-DM-Dmp"/>
+                                    <constraint firstAttribute="trailing" secondItem="HQ8-CO-Zrg" secondAttribute="trailing" id="4mq-Jb-qQy"/>
+                                    <constraint firstItem="9GS-ad-yXu" firstAttribute="leading" secondItem="qHN-QJ-oKE" secondAttribute="trailing" id="6On-zV-cYw"/>
+                                    <constraint firstAttribute="bottom" secondItem="qHN-QJ-oKE" secondAttribute="bottom" id="Juy-jH-ujU"/>
+                                    <constraint firstAttribute="height" constant="40" id="Nn6-u0-xdV"/>
+                                    <constraint firstAttribute="bottom" secondItem="9GS-ad-yXu" secondAttribute="bottom" id="avC-aL-xeB"/>
+                                    <constraint firstItem="qHN-QJ-oKE" firstAttribute="width" secondItem="9GS-ad-yXu" secondAttribute="width" id="ceZ-CD-Yqk"/>
+                                    <constraint firstAttribute="bottom" secondItem="HQ8-CO-Zrg" secondAttribute="bottom" id="f8I-5i-Sj2"/>
+                                    <constraint firstItem="qHN-QJ-oKE" firstAttribute="top" secondItem="0zC-BM-xjL" secondAttribute="top" id="iVT-Qc-wsz"/>
+                                    <constraint firstItem="qHN-QJ-oKE" firstAttribute="leading" secondItem="0zC-BM-xjL" secondAttribute="leading" id="uIp-49-3it"/>
+                                    <constraint firstItem="HQ8-CO-Zrg" firstAttribute="leading" secondItem="0zC-BM-xjL" secondAttribute="leading" id="yyR-Yq-GTo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DWS-K7-TEi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0zC-BM-xjL" firstAttribute="trailing" secondItem="DWS-K7-TEi" secondAttribute="trailing" id="5re-Na-IHc"/>
+                            <constraint firstItem="0zC-BM-xjL" firstAttribute="top" secondItem="DWS-K7-TEi" secondAttribute="top" id="fEu-qs-gSG"/>
+                            <constraint firstItem="0zC-BM-xjL" firstAttribute="leading" secondItem="DWS-K7-TEi" secondAttribute="leading" id="w0L-tF-G1b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentButtonView" destination="0zC-BM-xjL" id="KuD-I3-OFI"/>
+                        <outlet property="paging1Button" destination="qHN-QJ-oKE" id="oeJ-LM-x0G"/>
+                        <outlet property="paging2Button" destination="9GS-ad-yXu" id="h4H-sT-gNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0p-dF-D4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="70"/>
+        </scene>
+        <!--Child Paging View Controller-->
+        <scene sceneID="DwX-li-t4p">
+            <objects>
+                <viewController storyboardIdentifier="ChildPagingViewController" id="t3q-Zl-EcN" customClass="ChildPagingViewController" customModule="MVVMReactiveProgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VPI-dF-Iy5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qif-VC-iOv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7z-d3-WhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="-22"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="afafaf">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="be1e2d">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="c12026">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="d5">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -10,7 +10,6 @@ import Foundation
 
 class MutableSectionMutableCellViewModel: BaseViewModel {
     
-    
     override func react() {
         
     }
